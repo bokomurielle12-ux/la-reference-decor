@@ -165,7 +165,7 @@ export default function Services() {
 
         <div className="text-center">
 
-          <span className="uppercase tracking-[5px] text-[#ff6600] font-semibold">
+          <span className="uppercase tracking-[5px] text-[#ff6600] mt-6 font-semibold">
             Nos Services
           </span>
 

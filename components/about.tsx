@@ -156,15 +156,15 @@ export default function About() {
           viewport={{ once: true }}
         >
 
-          <span className="text-[#ff6600] uppercase tracking-[5px] font-semibold">
-            À propos
+          <span className="text-[#ff6600] uppercase tracking-[5px] font-semibold text-2xl">
+            À PROPOS DE NOUS
           </span>
 
-          <h2 className="text-5xl font-bold text-[#006633] mt-5 leading-tight">
-            Votre partenaire de confiance pour une décoration exceptionnelle.
+          <h2 className="text-4xl font-semibold text-[#000000] mt-5 leading-tight">
+            La passion du détail,le goût de l'excellence
           </h2>
 
-          <p className="text-gray-600 text-lg mt-8 leading-9">
+          <p className="text-gray-600 text-l mt-8 leading-9">
             LA RÉFÉRENCE COIFFURE & DÉCOR accompagne les particuliers,
             entreprises, hôtels, églises et organisateurs d'événements
             dans la création d'espaces élégants et mémorables.
@@ -194,11 +194,12 @@ export default function About() {
 
           </div>
 
-          <button className="mt-12 bg-[#006633] text-white px-10 py-4 rounded-full hover:bg-green-800 duration-300">
+          <button className="mt-6 bg-[#006633] text-white w-40 py-4 rounded md hover:bg-green-800 duration-300">
 
-            En savoir plus
+            en savoir plus
 
           </button>
+        
 
         </motion.div>
 

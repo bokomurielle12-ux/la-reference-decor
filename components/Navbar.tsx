@@ -1,55 +1,8 @@
-// "use client";
-
-// export default function Navbar() {
-//   return (
-//     <header className="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
-
-//       <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-
-//         <div>
-
-//           <h1 className="text-2xl font-bold text-[#006633]">
-//             LA RÉFÉRENCE
-//           </h1>
-
-//           <p className="text-[#ff6600] text-sm">
-//             COIFFURE & DÉCOR
-//           </p>
-
-//         </div>
-
-//         <nav className="hidden lg:flex gap-8">
-
-//           <a href="#home">Accueil</a>
-
-//           <a href="#about">À propos</a>
-
-//           <a href="#services">Services</a>
-
-//           <a href="#gallery">Réalisations</a>
-
-//           <a href="#catalogue">Catalogue</a>
-
-//           <a href="#reservation">Réservation</a>
-
-//           <a href="#contact">Contact</a>
-
-//         </nav>
-
-//       </div>
-
-//     </header>
-//   );
-// }
 "use client";
 
 import { useState } from "react";
 import Image from "next/image";
-import {
-  FaBars,
-  FaTimes,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaBars, FaTimes, FaWhatsapp, FaArrowRight } from "react-icons/fa";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -57,25 +10,27 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
 
-      <div className="max-w-7xl mx-auto h-20 px-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto flex items-center justify-between h-24 px-6">
 
         {/* LOGO */}
 
         <a href="/" className="flex items-center">
 
           <Image
-            src="/logo.svg"
+  
+            src="/images/logo/logo.png"
             alt="La Référence Coiffure & Décor"
-            width={170}
-            height={70}
+           width={80}
+           height={60}
             priority
+            className="object-contain"
           />
 
         </a>
 
-        {/* MENU DESKTOP */}
+        {/* MENU */}
 
-        <nav className="hidden lg:flex items-center gap-8 font-medium">
+        <nav className="hidden lg:flex items-center gap-8 font-medium text-gray-800">
 
           <a href="#home" className="hover:text-[#ff6600] duration-300">
             Accueil
@@ -105,18 +60,33 @@ export default function Navbar() {
             Contact
           </a>
 
+        </nav>
+
+        {/* ACTIONS */}
+
+        <div className="hidden lg:flex items-center gap-5">
+
           <a
             href="https://wa.me/2290196368779"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#25D366] text-white w-11 h-11 rounded-full flex items-center justify-center hover:scale-110 duration-300"
+            className="w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:scale-110 duration-300"
           >
             <FaWhatsapp size={22} />
           </a>
 
-        </nav>
+          <a
+            href="#contact"
+            className="bg-[#ff6600] hover:bg-orange-600 text-white px-7 py-3 rounded-full flex items-center gap-3 font-semibold duration-300"
+          >
+            Demander un devis
 
-        {/* BOUTON MOBILE */}
+            <FaArrowRight />
+          </a>
+
+        </div>
+
+        {/* MENU MOBILE */}
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
@@ -127,76 +97,43 @@ export default function Navbar() {
 
       </div>
 
-      {/* MENU MOBILE */}
-
       {menuOpen && (
 
-        <nav className="lg:hidden bg-white border-t shadow-md">
+        <nav className="lg:hidden bg-white shadow-lg">
 
-          <a
-            href="#home"
-            onClick={() => setMenuOpen(false)}
-            className="block px-6 py-4 hover:bg-gray-100"
-          >
+          <a href="#home" className="block px-6 py-4">
             Accueil
           </a>
 
-          <a
-            href="#about"
-            onClick={() => setMenuOpen(false)}
-            className="block px-6 py-4 hover:bg-gray-100"
-          >
+          <a href="#about" className="block px-6 py-4">
             À propos
           </a>
 
-          <a
-            href="#services"
-            onClick={() => setMenuOpen(false)}
-            className="block px-6 py-4 hover:bg-gray-100"
-          >
+          <a href="#services" className="block px-6 py-4">
             Services
           </a>
 
-          <a
-            href="#gallery"
-            onClick={() => setMenuOpen(false)}
-            className="block px-6 py-4 hover:bg-gray-100"
-          >
+          <a href="#gallery" className="block px-6 py-4">
             Réalisations
           </a>
 
-          <a
-            href="#catalogue"
-            onClick={() => setMenuOpen(false)}
-            className="block px-6 py-4 hover:bg-gray-100"
-          >
+          <a href="#catalogue" className="block px-6 py-4">
             Catalogue
           </a>
 
-          <a
-            href="#reservation"
-            onClick={() => setMenuOpen(false)}
-            className="block px-6 py-4 hover:bg-gray-100"
-          >
+          <a href="#reservation" className="block px-6 py-4">
             Réservation
           </a>
 
-          <a
-            href="#contact"
-            onClick={() => setMenuOpen(false)}
-            className="block px-6 py-4 hover:bg-gray-100"
-          >
+          <a href="#contact" className="block px-6 py-4">
             Contact
           </a>
 
           <a
-            href="https://wa.me/2290196368779"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 px-6 py-4 text-[#25D366] font-semibold hover:bg-gray-100"
+            href="#contact"
+            className="block mx-6 my-5 text-center bg-[#ff6600] text-white py-3 rounded-full"
           >
-            <FaWhatsapp />
-            WhatsApp
+            Demander un devis
           </a>
 
         </nav>
