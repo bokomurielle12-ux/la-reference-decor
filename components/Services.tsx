@@ -125,7 +125,6 @@ import {
   FaGlassCheers,
   FaCouch,
   FaArrowRight,
-  FaStar,
 } from "react-icons/fa";
 
 const services = [
@@ -218,7 +217,7 @@ export default function Services() {
 
         </div>
 
-        <div className="grid md:grid-cols-3 gap-10 mt-24">
+        {/* <div className="grid md:grid-cols-3 gap-10 mt-24">
 
           <div className="text-center">
 
@@ -262,7 +261,7 @@ export default function Services() {
 
           </div>
 
-        </div>
+        </div> */}
 
       </div>
     </section>

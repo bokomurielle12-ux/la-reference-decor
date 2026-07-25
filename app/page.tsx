@@ -88,10 +88,10 @@ export default function Home() {
       <main>
         <Hero />
 
-        <About />
-
         <Services />
 
+         <About />
+         
         <Statistics />
 
         <Gallery />
